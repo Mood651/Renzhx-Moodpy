@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>支持MOOD科技传媒</title>
+</head>
+
+<body>
+  <h2>输入您获取的支持码</h2>
+  <form action="">
+    <label for="password">支持码：</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <input type="submit" value="验证">
+  </form>
+  <div id="result"></div>
+</body>
+
+<script>
+  // 获取表单元素
+  var form = document.querySelector('form');
+  // 获取结果显示元素
+  var result = document.getElementById('result');
+
+  // 为表单添加提交事件处理程序
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // 阻止表单默认提交行为
+
+    // 获取输入的密码
+    var password = document.getElementById('password').value;
+
+    // 进行密码验证
+    if (password === 'duhci') { // 这里假设正确密码为 123456
+      result.innerHTML = '验证成功，感谢您对我们的支持！';
+    } else {
+      result.innerHTML = '验证错误';
+    }
+  });
+</script>
+
+</html>
